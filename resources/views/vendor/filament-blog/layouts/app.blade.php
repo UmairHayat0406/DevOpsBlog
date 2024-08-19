@@ -242,7 +242,7 @@
                 </div>
                 <div class="mt-7 flex flex-wrap items-start justify-center gap-10 border-t border-slate-200 pt-5">
                     <div class="text-hurricane/50 text-sm font-medium">
-                        © 2024 {{ $setting->organization_name ?? 'Firefly Blog' }}. All rights reserved.
+                        © 2024 {{ $setting->organization_name ?? 'DevOpsBlog' }}. All rights reserved.
                     </div>
                 </div>
             </div>
