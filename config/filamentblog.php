@@ -18,7 +18,7 @@ return [
         'prefix' => 'fblog_', // prefix for all blog tables
     ],
     'route' => [
-        'prefix' => 'blogs',
+        'prefix' => '/',
         'middleware' => ['web'],
         //        'home' => [
         //            'name' => 'filamentblog.home',
