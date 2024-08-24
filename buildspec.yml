@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      php: 8.2 
+    commands:
+      - yum update -y
+      - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+      - sudo yum install -y libpq-devel libzip-devel
+      - sudo yum install -y php-pgsql
+      - curl -sS https://getcomposer.org/installer -o composer-setup.php
+      - php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+  pre_build:
+    commands:
+      - composer install
+      - npm install
+artifacts:
+  files:
+    - '**/*'
+  name: $(date +%Y-%m-%dT%H:%M:%S).zip
+proxy:
+  upload-artifacts: yes
+  logs: yes
