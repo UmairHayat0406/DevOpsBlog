@@ -9,7 +9,7 @@
                         <img src="{{ $logo }}" alt="{{ $title }}" class="max-h-[60px]" />
                         @else
                         <strong class="text-2xl  text-primary-600">
-                            {{ $title ?: 'Firefly Blog' }}
+                            {{ $title ?: 'DevOpsBlog' }}
                         </strong>
                         @endif
                     </a>
